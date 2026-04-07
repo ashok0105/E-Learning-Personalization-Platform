@@ -1,0 +1,109 @@
+/* Page Layout */
+.progress-page {
+  padding: 40px 10px;
+  max-width: 1200px;
+}
+
+/* Header */
+.progress-header {
+  margin-bottom: 30px;
+}
+
+.progress-header h2 {
+  font-weight: 700;
+}
+
+.progress-header p {
+  color: #6c757d;
+}
+
+/* Stat Cards */
+.stat-card {
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Info Card */
+.info-card {
+  background: #f8fbff;
+  border-left: 5px solid #0d6efd;
+  border-radius: 12px;
+}
+
+/* Course Progress */
+.course-progress-item {
+  margin-bottom: 25px;
+}
+
+.course-title {
+  font-weight: 500;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Table Styling */
+.custom-table thead {
+  background-color: #f8f9fa;
+}
+
+.custom-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* Empty State */
+.empty-history {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .progress-page {
+    padding: 20px 5px;
+  }
+
+  .stat-card h3 {
+    font-size: 20px;
+  }
+}
+
+/* Delete Button */
+.btn-danger {
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* Checkbox Style */
+table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

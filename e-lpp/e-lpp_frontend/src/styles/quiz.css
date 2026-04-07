@@ -1,0 +1,47 @@
+.quiz-container {
+  max-width: 720px;
+  margin-top: 40px;
+}
+
+.quiz-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.quiz-card.success {
+  border-left: 6px solid #198754;
+}
+
+.quiz-card.fail {
+  border-left: 6px solid #dc3545;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option:hover {
+  background-color: #f8f9fa;
+}
+
+.option.active {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+}
+
+.option input {
+  pointer-events: none;
+}
+
+.review-item {
+  padding: 6px 0;
+  font-size: 14px;
+}

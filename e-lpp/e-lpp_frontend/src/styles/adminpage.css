@@ -1,0 +1,140 @@
+/* ===== PAGE BACKGROUND ===== */
+.admin-wrapper {
+  background: #f4f6f9;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.admin-header h2 {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* ===== STATS ===== */
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #4e73df;
+  color: white;
+}
+
+/* ===== CARD ===== */
+.saas-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== HEADER FIX ===== */
+.saas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+  position: relative;
+  width: 260px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 38px;
+  padding: 6px 10px 6px 34px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #4e73df;
+  box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #888;
+}
+
+/* ===== FILTER ===== */
+.status-filter {
+  height: 38px;
+  width: 150px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* ===== TABLE ===== */
+.table thead {
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+/* ===== PAGINATION ===== */
+.pagination .page-item.active .page-link {
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+/* ===== BUTTON HOVER ===== */
+.btn {
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .saas-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,104 @@
+/* ============================= */
+/* SIGNUP WRAPPER */
+/* ============================= */
+
+.signup-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ddecee, #dfeaec);  /* 🔥 SAME AS LOGIN */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  background: rgba(17, 24, 39, 0.95);  /* 🔥 SAME AS LOGIN CARD */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #ffffff;
+}
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.signup-title {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ============================= */
+/* LABEL */
+/* ============================= */
+
+.form-label {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+}
+
+/* ============================= */
+/* INPUT */
+/* ============================= */
+
+.custom-input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.custom-input::placeholder {
+  color: #94a3b8;
+}
+
+.custom-input:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.2rem rgba(34,197,94,0.25);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.signup-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(34,197,94,0.4);
+}
+
+/* ============================= */
+/* LOGIN LINK */
+/* ============================= */
+
+.login-link {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.login-link:hover {
+  color: #22c55e;
+}
+
+/* Fix bottom text visibility */
+.signup-wrapper .text-muted,
+.signup-wrapper span {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}

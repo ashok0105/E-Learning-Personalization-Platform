@@ -1,0 +1,50 @@
+.login-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff, #eef2ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* 🔽 Reduced card size */
+.login-card {
+  width: 100%;
+  max-width: 360px;   /* was 420px */
+  border-radius: 12px;
+  border: none;
+}
+
+/* 🔽 Smaller title */
+.login-card h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* 🔽 Reduce spacing */
+.login-card .card-body {
+  padding: 22px;
+}
+
+.form-label {
+  font-size: 14px;
+}
+
+/* 🔽 Smaller input height */
+.form-control {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* 🔽 Button slightly smaller */
+.btn-primary {
+  padding: 8px;
+  font-size: 15px;
+  background-color: #2563eb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}

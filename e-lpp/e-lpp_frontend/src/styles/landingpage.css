@@ -1,0 +1,61 @@
+.landing-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  overflow-x: hidden;
+  color: white;
+}
+
+/* HERO */
+.hero-section {
+  position: relative;
+  padding: 150px 0;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: 20px auto 40px;
+  color: #cbd5e1;
+}
+
+/* Floating Shapes */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation: float 8s infinite ease-in-out;
+}
+
+.shape1 { width: 300px; height: 300px; background: #22c55e; top: -50px; left: -50px; }
+.shape2 { width: 250px; height: 250px; background: #3b82f6; bottom: -50px; right: -50px; }
+.shape3 { width: 200px; height: 200px; background: #38bdf8; top: 40%; right: 20%; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}

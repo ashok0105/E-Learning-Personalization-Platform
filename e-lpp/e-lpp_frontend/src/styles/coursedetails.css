@@ -1,0 +1,356 @@
+/* Layout Fix */
+.layout-wrapper {
+  display: flex;
+}
+
+.course-content {
+  flex: 1;
+  padding: 30px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Header */
+.course-header h2 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.course-header p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* Enrollment badges */
+.enrollment-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.enrollment-badge.enrolled {
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+}
+
+.enrollment-badge.completed {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+/* Card Design */
+.custom-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Section Title */
+.section-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-primary {
+  color: #2563eb;
+}
+
+.icon-success {
+  color: #16a34a;
+}
+
+.icon-muted {
+  color: #d1d5db;
+}
+
+/* ══════════════════════════════════════════
+   VIDEO SECTION
+   ══════════════════════════════════════════ */
+.video-section-layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.video-player-area {
+  flex: 1;
+  min-width: 320px;
+}
+
+.video-embed-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-link-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 10px;
+}
+
+.video-link-fallback .yt-icon {
+  font-size: 48px;
+  color: #ff0000;
+}
+
+.current-video-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.video-duration {
+  font-size: 12px;
+  background: #e5e7eb;
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ── Video Playlist ── */
+.video-playlist {
+  width: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.playlist-title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #374151;
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 4px;
+}
+
+.playlist-item:hover {
+  background: #e0e7ff;
+  transform: scale(1.01);
+}
+
+.playlist-item.active {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+}
+
+.playlist-item.active .playlist-duration {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.playlist-index {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.playlist-item.active .playlist-index {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.playlist-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.playlist-video-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist-duration {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.playing-icon {
+  color: #fff;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   NOTES SECTION
+   ══════════════════════════════════════════ */
+.notes-lock-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #fef3c7, #fffbeb);
+  border: 1px solid #fbbf24;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  color: #92400e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.notes-lock-banner .lock-icon {
+  font-size: 16px;
+  color: #d97706;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.note-item:hover {
+  background: #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.note-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.note-pdf-icon {
+  font-size: 24px;
+  color: #ef4444;
+}
+
+.note-item small {
+  display: block;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.disabled-note-btn {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+}
+
+/* ══════════════════════════════════════════
+   EMPTY / PLACEHOLDER STATE
+   ══════════════════════════════════════════ */
+.no-content-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+}
+
+.no-content-placeholder .placeholder-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.no-content-placeholder p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Button */
+.action-btn {
+  padding: 10px 35px;
+  border-radius: 10px;
+}
+
+/* Loading */
+.loading {
+  padding: 50px;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .video-section-layout {
+    flex-direction: column;
+  }
+
+  .video-playlist {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .note-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .note-actions {
+    align-self: flex-end;
+  }
+}
