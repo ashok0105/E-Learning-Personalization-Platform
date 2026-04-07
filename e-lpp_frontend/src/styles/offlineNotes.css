@@ -1,0 +1,72 @@
+.offline-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Storage card */
+.storage-card {
+  border-radius: 14px;
+  background: #f8faff;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Note card */
+.note-card {
+  border-radius: 14px;
+  border: 1px solid #e2e8f0 !important;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* File icon box */
+.file-icon {
+  background: #e7f1ff;
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Offline badge */
+.offline-badge {
+  background-color: #e6f4ea;
+  color: #198754;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Empty state */
+.empty-card {
+  border: 2px dashed #cbd5e1 !important;
+  border-radius: 16px;
+  background-color: #fafafa;
+}
+
+/* ── File upload drop area ── */
+.upload-drop-area {
+  border: 2px dashed #93c5fd;
+  border-radius: 12px;
+  padding: 24px 16px;
+  background: #eff6ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  transition: background 0.2s, border-color 0.2s;
+  user-select: none;
+}
+
+.upload-drop-area:hover {
+  background: #dbeafe;
+  border-color: #3b82f6;
+}

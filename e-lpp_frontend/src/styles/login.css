@@ -1,0 +1,91 @@
+.login-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+/* CARD */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  background: rgba(17, 24, 39, 0.95);   /* 🔥 darker background */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #ffffff;
+}
+
+/* TITLE */
+.login-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* SUBTITLE */
+.login-card p {
+  color: #cbd5e1 !important;   /* 🔥 visible grey */
+  opacity: 1 !important;
+}
+
+/* LABELS */
+.form-label {
+  color: #e2e8f0 !important;   /* 🔥 strong visible label */
+  font-weight: 500;
+}
+
+/* INPUT */
+.form-control-enhanced {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.form-control-enhanced::placeholder {
+  color: #94a3b8;
+}
+
+.form-control-enhanced:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.2rem rgba(34,197,94,0.25);
+}
+
+/* BUTTON */
+.login-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(34,197,94,0.4);
+}
+
+/* SIGNUP LINK */
+.login-wrapper a {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.login-wrapper a:hover {
+  color: #22c55e;
+}
+
+/* Fix bottom text visibility */
+.login-wrapper .text-muted {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}
+
+.login-wrapper span {
+  color: #cbd5e1 !important;
+}

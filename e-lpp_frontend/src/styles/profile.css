@@ -1,0 +1,64 @@
+.profile-page .card {
+  border-radius: 16px;
+  border: none;
+}
+
+.profile-card {
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #0d6efd, #4f8cff);
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.stat-box {
+  padding: 25px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-box h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.certificate-card {
+  background: #f8f9fa;
+  border-radius: 14px;
+  border: 1px solid #e9ecef;
+  transition: 0.3s;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}

@@ -1,0 +1,182 @@
+/* ===== Layout ===== */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--light-bg);
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: var(--light-bg);
+}
+
+/* ===== Page Header ===== */
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #333;
+}
+
+.page-subtitle {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 60px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.empty-state-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.empty-state-content i {
+  font-size: 4rem;
+  opacity: 0.7;
+}
+
+/* ===== Course Card ===== */
+.course-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.course-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.course-title {
+  font-weight: 600;
+  color: #333;
+  margin-right: 10px;
+}
+
+.course-category {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.course-description {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.course-progress {
+  margin-bottom: 15px;
+}
+
+.course-progress small {
+  font-size: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: darken(#007bff, 10%);
+}
+
+/* Previous CSS remains the same, add these new styles */
+
+/* Previous CSS remains the same, update these sections */
+
+/* ===== Course Image ===== */
+.course-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.course-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image {
+  transform: scale(1.05);
+}
+
+.course-category-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.course-category {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 20px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-card-header {
+  display: block; /* Changed from flex to block */
+  margin-bottom: 15px;
+}
+
+.course-title {
+  font-weight: 600;
+  color: #333;
+  margin-right: 0; /* Removed margin-right */
+  display: block; /* Ensure full width */
+}
