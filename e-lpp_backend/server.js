@@ -37,8 +37,6 @@ app.use('/api/progress',     require('./routes/progressRoutes'));
 app.use('/api/admin',        require('./routes/adminRoutes'));
 app.use('/api/offline-notes',require('./routes/offlineNoteRoutes'));
 
-// ── HuggingFace AI (NEW) ──────────────────────────────────────
-app.use('/api/ai',           require('./routes/huggingfaceRoutes'));
 
 // ── YouTube Data API ──────────────────────────────────────────
 // Kept: instructors use it to search/embed videos
