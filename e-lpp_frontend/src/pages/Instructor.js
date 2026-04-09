@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import "../styles/instructor.css";
 
-const BASE_URL          = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL          = "https://e-learning-personalization-platform-8.onrender.com";
 const INSTRUCTOR_DOMAIN = "elpp.ac.in"; // keep in sync with backend + ProtectRoute
 
 /* ── YouTube embed helper ── */
