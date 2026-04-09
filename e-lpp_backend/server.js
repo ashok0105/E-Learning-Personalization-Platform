@@ -21,6 +21,15 @@ const allowedOrigins = [
   "https://e-learning-personalization-platform-17.onrender.com:443"
 ];
 
+app.use((err, req, res, next) => {
+  console.error("🔥 FULL ERROR:", err);
+
+  res.status(500).json({
+    message: err.message,
+    stack: err.stack
+  });
+});
+
 app.use(cors({
   origin: function (origin, callback) {
     // allow requests with no origin (mobile apps, postman)
