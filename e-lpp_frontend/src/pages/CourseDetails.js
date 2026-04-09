@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import "../styles/coursedetails.css";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 
 /* ── Helper — extract YouTube embed URL ── */
 function getYouTubeEmbedUrl(url) {
