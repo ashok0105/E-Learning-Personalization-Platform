@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../styles/signup.css";
 
-const BASE_URL          = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL          = "https://e-learning-personalization-platform-8.onrender.com";
 const INSTRUCTOR_DOMAIN = "elpp.ac.in";    // instructor must use  name@elpp.ac.in
 const ADMIN_DOMAIN      = "elpp.ac.in";    // admin must also use  name@elpp.ac.in
 const ADMIN_SECRET_KEY  = "ELPP@Admin2024"; // shown only on admin role select
