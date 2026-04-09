@@ -9,7 +9,7 @@ import {
   FaSearch
 } from "react-icons/fa";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 
 export default function Admin() {
   const [allCourses, setAllCourses] = useState([]);
