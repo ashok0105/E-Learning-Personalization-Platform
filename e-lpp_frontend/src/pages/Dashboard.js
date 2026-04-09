@@ -18,7 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import "../styles/dashboard.css";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
