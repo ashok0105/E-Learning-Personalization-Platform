@@ -30,20 +30,17 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.use(cors({
-  origin: function (origin, callback) {
-    // allow requests with no origin (mobile apps, postman)
-    if (!origin) return callback(null, true);
+const cors = require("cors");
 
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      console.log("❌ Blocked by CORS:", origin);
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true
+// ✅ Allow all origins (FOR DEBUG - IMPORTANT)
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+// ✅ Handle preflight requests
+app.options("*", cors());
 
 // ✅ HANDLE PREFLIGHT (VERY IMPORTANT)
 app.options('*', cors());
