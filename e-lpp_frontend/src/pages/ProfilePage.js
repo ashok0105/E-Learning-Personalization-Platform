@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 import "../styles/profile.css";
 
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 
 export default function ProfilePage() {
   // ── Read user from localStorage (same pattern as Navbar.js) ──────────────
