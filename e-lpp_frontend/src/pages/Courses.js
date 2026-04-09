@@ -11,8 +11,8 @@ import {
 import { useState, useEffect } from "react";
 import "../styles/courses.css";
 
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
+pr
 function Courses() {
   const [allCourses,  setAllCourses]  = useState([]);
   const [loading,     setLoading]     = useState(true);
