@@ -5,7 +5,7 @@ import { GoogleLogin } from "@react-oauth/google";   // npm install @react-oauth
 import Navbar from "../components/Navbar";
 import "../styles/login.css";
 
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 
 function Login() {
   const [formData,  setFormData]  = useState({ email: "", password: "" });
