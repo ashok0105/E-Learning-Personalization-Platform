@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import "../styles/mycourse.css";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 const DEFAULT_COURSE_IMAGE = "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=350&h=200&fit=crop";
 
 function MyCourse() {
