@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/quiz.css";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://e-learning-personalization-platform-8.onrender.com";
 
 export default function QuizPage() {
   const location = useLocation();
