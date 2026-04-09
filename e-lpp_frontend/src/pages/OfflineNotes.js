@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import "../styles/offlineNotes.css";
 
-const BASE_URL  = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL  ="https://e-learning-personalization-platform-8.onrender.com";
 const MAX_BYTES = 10 * 1024 * 1024;                          // 10 MB
 const ALLOWED_TYPES = ["application/pdf", "image/png", "image/jpeg", "image/jpg"];
 
