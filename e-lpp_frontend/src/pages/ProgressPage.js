@@ -29,7 +29,7 @@ export default function ProgressPage() {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const res = await fetch("http://localhost:5000/api/progress/my-progress", {
+        const res = await fetch("https://e-learning-personalization-platform-8.onrender.com/api/progress/my-progress", {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
