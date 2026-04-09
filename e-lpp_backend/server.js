@@ -12,13 +12,32 @@ const app = express();
 // MIDDLEWARE
 // ═══════════════════════════════════════════════════════════════
 app.use(express.json({ limit: "10mb" }));
+
+// ✅ CORS FIX (IMPORTANT)
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+  "https://e-learning-personalization-platform-17.onrender.com",
+  "https://e-learning-personalization-platform-17.onrender.com:443"
+];
+
 app.use(cors({
-  // Read from .env so this works in production too
-  origin: process.env.ALLOWED_ORIGINS
-    ? process.env.ALLOWED_ORIGINS.split(",")
-    : ["http://localhost:3000", "http://127.0.0.1:3000"],
+  origin: function (origin, callback) {
+    // allow requests with no origin (mobile apps, postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.log("❌ Blocked by CORS:", origin);
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
+
+// ✅ HANDLE PREFLIGHT (VERY IMPORTANT)
+app.options('*', cors());
 
 // ═══════════════════════════════════════════════════════════════
 // ROUTES
@@ -37,29 +56,11 @@ app.use('/api/progress',     require('./routes/progressRoutes'));
 app.use('/api/admin',        require('./routes/adminRoutes'));
 app.use('/api/offline-notes',require('./routes/offlineNoteRoutes'));
 
-
-// ── YouTube Data API ──────────────────────────────────────────
-// Kept: instructors use it to search/embed videos
+// YouTube API
 app.use('/api/youtube',      require('./routes/youtubeRoutes'));
 
-// ══════════════════════════════════════════════════════════════
-// REMOVED APIs (see notes below)
-// ══════════════════════════════════════════════════════════════
-//
-// ✂️  REMOVED: /api/generate-quiz  (Quizgecko)
-//     Reason: paid API, overlaps with HuggingFace /api/ai/generate-quiz-questions
-//             which is free.  Delete quizgeckoController.js & generateQuizRoutes.js
-//
-// ✂️  REMOVED: /api/quizapi  (QuizAPI.io)
-//     Reason: the free tier is very limited (50 req/day) and the instructor
-//             quiz builder already lets instructors create questions manually.
-//             HuggingFace generate-quiz-questions covers the AI-generation use-case.
-//             Delete quizApiController.js & quizApiRoutes.js
-//
-// ══════════════════════════════════════════════════════════════
-
 // ═══════════════════════════════════════════════════════════════
-// GLOBAL ERROR HANDLERS
+// ERROR HANDLERS
 // ═══════════════════════════════════════════════════════════════
 app.use((req, res) => {
   res.status(404).json({ message: `Route not found: ${req.method} ${req.originalUrl}` });
