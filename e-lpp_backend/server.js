@@ -16,7 +16,7 @@ app.use(cors({
   // Read from .env so this works in production too
   origin: process.env.ALLOWED_ORIGINS
     ? process.env.ALLOWED_ORIGINS.split(",")
-    : ["http://localhost:3000", "http://127.0.0.1:3000"],
+    : ["http://localhost:3000", "https://e-learning-personalization-platform-8.onrender.com"],
   credentials: true
 }));
 
