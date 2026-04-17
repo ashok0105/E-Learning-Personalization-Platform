@@ -13,13 +13,12 @@ const app = express();
 // ═══════════════════════════════════════════════════════════════
 app.use(express.json({ limit: "10mb" }));
 app.use(cors({
-  // Read from .env so this works in production too
-  origin: process.env.ALLOWED_ORIGINS
-    ? process.env.ALLOWED_ORIGINS.split(",")
-    : ["http://localhost:3000", "https://e-learning-personalization-platform-17.onrender.com"],
+  origin: [
+    "http://localhost:3000",
+    "https://e-learning-personalization-platform-17.onrender.com"
+  ],
   credentials: true
 }));
-
 // ═══════════════════════════════════════════════════════════════
 // ROUTES
 // ═══════════════════════════════════════════════════════════════
